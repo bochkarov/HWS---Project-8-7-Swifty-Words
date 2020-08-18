@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5EB7B324EC63660089282D /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE5EB7B224EC63660089282D /* level1.txt */; };
 		BEA7E8C424EAFD6200B4B403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7E8C324EAFD6200B4B403 /* AppDelegate.swift */; };
 		BEA7E8C624EAFD6200B4B403 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7E8C524EAFD6200B4B403 /* SceneDelegate.swift */; };
 		BEA7E8C824EAFD6200B4B403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7E8C724EAFD6200B4B403 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE5EB7B224EC63660089282D /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 		BEA7E8C024EAFD6200B4B403 /* HWS - Project 8 7 Swifty Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HWS - Project 8 7 Swifty Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA7E8C324EAFD6200B4B403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA7E8C524EAFD6200B4B403 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		BEA7E8C224EAFD6200B4B403 /* HWS - Project 8 7 Swifty Words */ = {
 			isa = PBXGroup;
 			children = (
+				BE5EB7B224EC63660089282D /* level1.txt */,
 				BEA7E8C324EAFD6200B4B403 /* AppDelegate.swift */,
 				BEA7E8C524EAFD6200B4B403 /* SceneDelegate.swift */,
 				BEA7E8C724EAFD6200B4B403 /* ViewController.swift */,
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA7E8D024EAFD6300B4B403 /* LaunchScreen.storyboard in Resources */,
+				BE5EB7B324EC63660089282D /* level1.txt in Resources */,
 				BEA7E8CD24EAFD6300B4B403 /* Assets.xcassets in Resources */,
 				BEA7E8CB24EAFD6200B4B403 /* Main.storyboard in Resources */,
 			);

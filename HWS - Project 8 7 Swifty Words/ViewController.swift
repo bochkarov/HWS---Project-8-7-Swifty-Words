@@ -54,11 +54,14 @@ class ViewController: UIViewController {
         submit.translatesAutoresizingMaskIntoConstraints = false
         submit.setTitle("SUBMIT", for: .normal)
         view.addSubview(submit)
+        submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
 
         let clear = UIButton(type: .system)
         clear.translatesAutoresizingMaskIntoConstraints = false
         clear.setTitle("CLEAR", for: .normal)
         view.addSubview(clear)
+        clear.addTarget(self, action: #selector(clearTapped), for: .touchUpInside)
+
         
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
@@ -66,24 +69,38 @@ class ViewController: UIViewController {
         
         let width = 150
         let height = 80
-        
+
+        // create 20 buttons as a 4x5 grid
         for row in 0..<4 {
-            for column in 0..<5 {
+            for col in 0..<5 {
+                // create a new button and give it a big font size
                 let letterButton = UIButton(type: .system)
-                
-                letterButton.titleLabel?.font = .systemFont(ofSize: 36)
-                
+                letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+
+                // give the button some temporary text so we can see it on-screen
                 letterButton.setTitle("WWW", for: .normal)
-                
-                let frame = CGRect(x: column * width, y: row * width, width: width, height: height)
+
+                // calculate the frame of this button using its column and row
+                let frame = CGRect(x: col * width, y: row * height, width: width, height: height)
                 letterButton.frame = frame
-                
+
+                // add it to the buttons view
                 buttonsView.addSubview(letterButton)
-                
+
+                // and also to our letterButtons array
                 letterButtons.append(letterButton)
-           
+                letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
+
             }
         }
+        
+        var activatedButtons = [UIButton]()
+        var solutions = [String]()
+        
+        var score = 0
+        var level = 1
+        
+        
     
         
         
@@ -118,7 +135,7 @@ class ViewController: UIViewController {
             buttonsView.heightAnchor.constraint(equalToConstant: 320),
             buttonsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             buttonsView.topAnchor.constraint(equalTo: submit.bottomAnchor, constant: 20),
-            buttonsView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -100)
+            buttonsView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: -20)
         ])
 //        cluesLabel.backgroundColor = .red
 //        answersLabel.backgroundColor = .blue
@@ -128,6 +145,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    @objc func letterTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc func submitTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc func clearTapped(_ sender: UIButton) {
         
     }
     
