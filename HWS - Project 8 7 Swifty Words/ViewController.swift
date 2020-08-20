@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     var activatedButtons = [UIButton]()
     var solutions = [String]()
     
-    var score = 0
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     var level = 1
     
     override func loadView() {
@@ -182,6 +186,17 @@ class ViewController: UIViewController {
             }
         }
     
+    func levelUp(action: UIAlertAction) {
+        level += 1
+        solutions.removeAll(keepingCapacity: true)
+
+        loadLevel()
+
+        for btn in letterButtons {
+            btn.isHidden = false
+        }
+    }
+    
     
     @objc func clearTapped(_ sender: UIButton) {
         currentAnswer.text = ""
@@ -228,6 +243,8 @@ class ViewController: UIViewController {
             for i in 0 ..< letterButtons.count {
                 letterButtons[i].setTitle(letterBits[i], for: .normal)
             }
-        }    }
+        }
+        
+    }
     
 }
